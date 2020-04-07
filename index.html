@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<style>
+
+body {
+ background-image: url("1046872-scaled.jpg");
+ background-color: #cccccc;
+ background-repeat: no-repeat, repeat;
+}
+
+@font-face {
+    font-family: Barrio;
+    src: url(font/Coluna_Rounded.otf)
+}
+  
+
+#container4 {
+    height: 10em;
+    position: relative
+    }
+
+.container4 {
+    margin: 0;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    
+    color: gray;
+    font-size: 100px;
+    font-family: Barrio; }
+
+		
+	</style>
+
+	<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {
+  i="0" + i;
+  }
+return i;
+}
+</script>
+
+<div class="container4">
+	<div id="txt">
+		<script type="text/javascript">document.write(startTime())</script>
+	</div>
+</div>
+	
+</body>
+</html>
